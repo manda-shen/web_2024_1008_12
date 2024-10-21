@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 70%;
+            background: rgba(185, 223, 245, 0.3);
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(166, 205, 218);
+            border: 1px solid rgb(174, 188, 192);
+            border-radius: 2%;
+            padding: 16px;
+        }
+
+        p {
+            font-size: 10px;
+            color: rgb(87, 95, 117);
+            border: 1px rgb(166, 172, 180);
+        }
+
+        input {
+            font-size: 9px;
+        }
+
+        select {
+            font-size: 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>HR form </legend>
+        <form action="./getData.php">
+
+            <p>
+                <label for="">name</label>
+                <input type="text" name="name" id="">
+                <br>
+            </p>
+
+            <p>
+                <label for="">編號</label>
+                <input type="text" name="nuber" id="" value="0321">
+                <br>
+            </p>
+
+            <p>
+                <label for="">入職日</label>
+                <input type="date" name="date" id="" value="2024-01-01">
+                <br>
+            </p>
+
+            <p>
+                <label for="">履歷檔</label>
+                <input type="file" name="theFile" id="">
+            </p>
+
+            <p>
+                <label for="">性別</label><br>
+                <input type="radio" name="sextual" id="" value="男">
+                <label for="">男</label>
+                <input type="radio" name="sextual" id="" value="女">
+                <label for="">女</label>
+            </p>
+
+            <p>
+                <label for="">職能</label>
+                <select name="option" id="">
+                    <option value="frontend">front end</option>
+                    <option value="backend">back end</option>
+                    <option value="fullstack">full stack</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="">技能</label><br>
+                <input type="checkbox" name="skill" id="" value="html">
+                <label for="">html</label>
+                <input type="checkbox" name="skill" id="" value="css">
+                <label for="">css</label>
+                <input type="checkbox" name="skill" id="" value="javascript">
+                <label for="">javascript</label>
+                <input type="checkbox" name="skill" id="" value="php">
+                <label for="">php</label>
+                <input type="checkbox" name="skill" id="" value="python">
+                <label for="">python</label>
+                <input type="checkbox" name="skill" id="" value="c++">
+                <label for="">c++</label>
+                <input type="checkbox" name="skill" id="" value="java">
+                <label for="">java</label>
+            </p>
+
+            <p>
+                <label for="">面試過程描述</label><br>
+                <textarea name="theTextarea" id="" cols="50" rows="7"></textarea>
+            </p>
+
+            <p>
+                <input type="submit" value="提交">
+            </p>
+
+        </form>
+    </fieldset>
+</body>
+
+</html>
