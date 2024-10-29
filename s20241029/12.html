@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Song</title>
+    <style>
+        /* 基本樣式重置 */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.all-free-download.com/images/graphiclarge/lights_silver_abstract_christmas_background_313030.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 毛玻璃背景 */
+        .backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        /* Header 樣式 */
+        header {
+            position: relative;
+            background-color: whitesmoke;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        /* Nav 樣式 */
+        nav {
+            position: relative;
+            background-color: #666;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            color: white;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-right: 1px solid #ccc;
+        }
+
+        nav ul li:last-child {
+            border-right: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* 歌詞區塊樣式 */
+        #lyrics,
+        #song {
+            position: relative;
+            padding: 20px;
+            padding-left: calc(10% + 10px);
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #333;
+            font-size: 1rem;
+            z-index: 1;
+        }
+
+        /* 調整歌曲資訊區塊的行高 */
+        #song p {
+            font-size: small;
+            line-height: 1.5;
+            /* 調整行高 */
+            margin: 0;
+            /* 移除多餘間距 */
+        }
+
+        #song span {
+            font-size: 15px;
+            line-height: 1.5;
+            /* 調整行高 */
+            margin: 10px;
+            /* 移除多餘間距 */
+        }
+
+        /* 影片嵌入樣式 */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 圖片框架樣式 */
+        .image-container {
+            position: relative;
+            /* 設定為 relative 以便使用 z-index */
+            z-index: 2;
+            /* 確保在 backdrop 上方 */
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+            /* 上下白色框10px，左右白色框20px */
+            background-color: white;
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            /* 控制圖片寬度 */
+            height: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            /* 圖片陰影效果 */
+        }
+
+        /* 固定導航按鈕樣式 */
+        .nav-buttons {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .nav-buttons a {
+            background-color: rgba(100, 97, 97, 0.3);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 80px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backdrop"></div> <!-- 毛玻璃效果覆蓋全螢幕 -->
+
+    <!-- Header 區塊 -->
+    <header>
+        <h2>All I Want for Christmas Is You</h2>
+    </header>
+
+    <!-- 導航選單 -->
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#lyrics">lyrics</a></li>
+                <li><a href="#song">song</a></li>
+                <li><a href="#song">Mariah Carey</a></li>
+                <li><a href="#video">music video</a></li>
+            </ul>
+        </nav>
+        <!-- 插入圖片，並加上框架 -->
+        <div class="image-container">
+            <img src="https://i.scdn.co/image/ab67616d0000b2734246e3158421f5abb75abc4f" alt="Christmas Album Cover">
+        </div>
+        <!-- 固定的導航按鈕 -->
+        <div class="nav-buttons">
+            <a href="#lyrics">Lyrics</a>
+            <a href="#song">Song</a>
+            <a href="#video">Video</a>
+            <a href="#top">Top</a>
+        </div>
+
+        <div id="song">
+            <p>
+                Lyricist: Mariah Carey & Walter Afanasieff
+            </p>
+            <p>
+                Composer: Mariah Carey & Walter Afanasieff
+            </p>
+            <hr>
+            <div>
+                <span>
+                    〈你是我最想要的聖誕禮物〉（英語：All I Want for Christmas Is
+                    You）
+                    是美國女歌手瑪麗亞·凱莉的一首歌曲，1994年11月由哥倫比亞唱片發行。〈你是我最想要的聖誕禮物〉收錄於瑪麗亞·凱莉的第4張錄音室專輯《祝福》中，是這張聖誕專輯的首支單曲。〈你是我最想要的聖誕禮物〉自1994年推出後就獲得廣大的好評，成為全美人民都能朗朗上口的聖誕歌曲，但這首歌曲一直至2019年才成為全美冠軍曲，2020年進一步成為瑪麗亞·凱莉第3首全英冠軍單曲。〈你是我最想要的聖誕禮物〉除了為凱莉締造許多樂壇新紀錄外，也是她所有單曲中銷售成績最高的，在美國已經被認證14白金。〈你是我最想要的聖誕禮物〉在全美累積已經獲得14週冠軍。
+                </span>
+            </div>
+        </div>
+
+
+        <!-- 歌詞區塊 -->
+        <div id="lyrics">
+            <p>I don't want a lot for Christmas<br>
+                There is just one thing I need<br>
+                I don't care about the presents<br>
+                Underneath the Christmas tree<br>
+                I just want you for my own<br>
+                More than you could ever know<br>
+                Make my wish come true<br>
+                All I want for Christmas is you, yeah</p>
+
+            <p>I don't want a lot for Christmas<br>
+                There is just one thing I need (And I)<br>
+                Don't care about the presents<br>
+                Underneath the Christmas tree<br>
+                I don't need to hang my stocking<br>
+                There upon the fireplace (Ah)<br>
+                Santa Claus won't make me happy<br>
+                With a toy on Christmas Day</p>
+
+            <p>I just want you for my own (Ooh)<br>
+                More than you could ever know (Ooh)<br>
+                Make my wish come true<br>
+                All I want for Christmas is you<br>
+                You, baby</p>
+
+            <p>Oh, I won't ask for much this Christmas<br>
+                I won't even wish for snow (And I)<br>
+                I'm just gonna keep on waiting<br>
+                Underneath the mistletoe<br>
+                I won't make a list and send it<br>
+                To the North Pole for Saint Nick (Ah)<br>
+                I won't even stay awake to<br>
+                Hear those magic reindeer click</p>
+
+            <p>'Cause I just want you here tonight (Ooh)<br>
+                Holding on to me so tight (Ooh)<br>
+                What more can I do?<br>
+                Oh baby, all I want for Christmas is you<br>
+                You, baby</p>
+
+            <p>Oh, all the lights are shining<br>
+                So brightly everywhere (So brightly, baby)<br>
+                And the sound of children's<br>
+                Laughter fills the air (Oh, oh yeah)<br>
+                And everyone is singing (Oh yeah)<br>
+                I hear those sleigh bells ringing (Oh)<br>
+                Santa, won't you bring me the one I really need? (Yeah, oh, oh)<br>
+                Won't you please bring my baby to me?</p>
+
+            <p>Oh, I don't want a lot for Christmas<br>
+                This is all I'm asking for (Ah)<br>
+                I just wanna see my baby<br>
+                Standing right outside my door</p>
+
+            <p>Oh, I just want you for my own (Ooh)<br>
+                More than you could ever know (Ooh)<br>
+                Make my wish come true<br>
+                Oh baby, all I want for Christmas is you</p>
+
+            <p>You, baby<br>
+                All I want for Christmas is you, baby (You)<br>
+                All I want for Christmas is you, baby (Ah, oh, ah, oh)<br>
+                All I want for Christmas is you, baby (You)<br>
+                All I want for Christmas is you, baby (All I really want, baby, ooh)<br>
+                All I want for Christmas is you, baby (All I want, all I really want is you)</p>
+        </div>
+    </div>
+
+    <!-- 音樂視頻區塊 -->
+    <div id="video" class="video-container">
+        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=79938174&bvid=BV1PJ411b7oL&cid=136809949&p=1"
+            scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1F 壽司郎</title>
+    <style>
+        /* 頁面標頭樣式 */
+        .header {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background-image: url('https://cdn2.ettoday.net/images/5608/5608591.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 變暗濾鏡 */
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* 標題文字 */
+        .title {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        .title::before,
+        .title::after {
+            content: "";
+            display: inline-block;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        /* 表格樣式 */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        td {
+            padding: 15px;
+            vertical-align: top;
+            border: 1px solid #ddd;
+        }
+
+        h4 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        /* 圖片連結樣式 */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <!-- 標題文字 -->
+        <div class="title">1F 壽司郎</div>
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <div class="image-container">
+                    <a href="https://images.ctee.com.tw/newsphoto/2024-06-24/1024/20240624701713.jpg">
+                        <img src="https://images.ctee.com.tw/newsphoto/2024-06-24/1024/20240624701713.jpg" alt="海鮮圖片">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <h4>對日本米的堅持</h4>
+                <p>壽司的精華是醋飯，壽司郎美味的醋飯，由調配專用的白米開始。</p>
+                <p>與契約農家簽約、精選數種不同品種的白米，各個季節調配出最適合做成醋飯的壽司郎專用米。</p>
+                <p>壽司郎堅持從日本進口專用米，並搭配同樣來自日本的專用醋，才得以製作出與人體體溫相當，入口即化的醋飯。</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>對食材處理的堅持</h4>
+                <p>壽司郎不設置中央工廠，而是在店內進行魚貨處理、切片的動作。</p>
+                <p>特別是針對鮪魚更有獨到的堅持。</p>
+                <p>我們費時將鮪魚靜置在與人體體溫相當的溫鹽水中退冰、仔細拭去水份後再放入冷藏加以熟成。</p>
+                <p>醃製類商品也使用特製醬汁，每一片都細心醃製。</p>
+            </td>
+            <td>
+                <div class="image-container">
+                    <a
+                        href="https://play-lh.googleusercontent.com/nycjeLPnGK5lR9bvjVvOti_yHvYiwlFmlWWRZGGyBBYil2Q_E84zK7jqAO9BM_sejhc">
+                        <img src="https://play-lh.googleusercontent.com/nycjeLPnGK5lR9bvjVvOti_yHvYiwlFmlWWRZGGyBBYil2Q_E84zK7jqAO9BM_sejhc"
+                            alt="世界美食圖片">
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="image-container">
+                    <a
+                        href="https://image.presslogic.com/holiday.presslogic.com/wp-content/uploads/2024/10/ca61f613.jpg?auto=format&w=1053">
+                        <img src="https://image.presslogic.com/holiday.presslogic.com/wp-content/uploads/2024/10/ca61f613.jpg?auto=format&w=1053"
+                            alt="地道小吃圖片">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <h4>對鮮度的堅持</h4>
+                <p>壽司郎的每一個壽司盤底都裝有晶片，只要迴轉距離超過350m，該盤壽司就會自動進行排除，嚴格控管每一盤壽司鮮度。</p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

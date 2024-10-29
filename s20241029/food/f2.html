@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漢來海港餐廳</title>
+    <style>
+        /* 頁面標頭樣式 */
+        .header {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background-image: url('https://inline.imgix.net/branch/-LdaoOlyYejB44opehGN:inline-live-2a466-null-138ebbdc-8123-4f18-9df8-f4fe6350367d.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 變暗濾鏡 */
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* 中心圓形圖片 */
+        .logo {
+            position: relative;
+            z-index: 2;
+            width: 180px;
+            height: 180px;
+            padding: 15px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        /* 標題和橫線 */
+        .title {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        .title::before,
+        .title::after {
+            content: "";
+            display: inline-block;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        /* 表格樣式 */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        td {
+            padding: 15px;
+            vertical-align: top;
+            border: 1px solid #ddd;
+        }
+
+        h4 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        /* 圖片連結樣式 */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <!-- 標題文字 -->
+        <div class="title">2F 馬辣頂級麻辣鍋</div>
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <div class="image-container">
+                    <a href="https://weismile.tw/wp-content/uploads/20190220224230_17.jpg">
+                        <img src="https://weismile.tw/wp-content/uploads/20190220224230_17.jpg" alt="海鮮圖片">
+                    </a>
+                </div>
+            </td>
+            <td>
+                <h4>生猛海鮮/現做點心/百種餐食/豪華百匯</h4>
+                <p>新鮮、豐富的海鮮食材，是漢來海港自助餐廳的招牌，名為「海港」，海鮮當然是最主要食材與菜色。3種蟹蟳類、8-10種生魚片，大蝦、花枝、蛤蜊、淡菜、章魚、風螺、扇貝，依產季不定期更換食材，品項豐富度堪稱全台之最。（圖片僅供參考
+                    / 餐點依現場供應為主）</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>東西薈萃 世界美食大集合</h4>
+                <p>廚藝精湛的主廚不斷供應各國特色餐食，讓近200道的豐富菜色增添不同的異國風情：義式香料烤鮮魚、泰國紅咖哩、墨西哥烤餅、日本散壽司、關東煮；還有各國起司、燻乾酪、德國豬腳、肉腸、法式香料烤雞、油封鴨腿、香港的燒臘、掛爐烤鴨以及本土風情的東港直送鮪魚、旗魚、海鱺；南部現燙牛肉湯、擔仔麵、黑白切、東石蚵仔煎、士林大香腸等等，吃一圈海港餐廳彷如環遊世界飽食了一頓各國美食大餐。（圖片僅供參考
+                    / 餐點依現場供應為主 / 未成年請勿飲酒）</p>
+            </td>
+            <td>
+                <div class="https://i0.wp.com/i.imgur.com/tGdIoG3.jpg?ssl=1">
+                    <img src="https://i0.wp.com/i.imgur.com/tGdIoG3.jpg?ssl=1" alt="菜單">
+                    </a>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+</body>

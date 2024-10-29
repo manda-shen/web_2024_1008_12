@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大飯店</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFoSY4DFmlYi_UeFqhwNx2pIe0Sm0ULcZtng&s');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgba(41, 41, 41, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        header {
+            position: relative;
+            background-color: rgb(27, 27, 27, 0.3);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+
+        /* 設定表格寬度與間距 */
+        table {
+            width: 100vw;
+            /* 表格寬度為頁面的100% */
+            text-align: center;
+            margin: 20px auto;
+            /* 表格置中 */
+            border-spacing: 10px;
+            /* 儲存格間距 */
+        }
+
+        tr,
+        td {
+
+            height: 20vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        td a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.5em;
+            z-index: 1;
+        }
+
+        /* 樓層背景圖片 */
+        .floor-3 {
+            background-image: url('https://admin.hilai-foods.com/storage/images/126/1_1608810738.jpg');
+            background-size: cover;
+            background-position: center;
+            font-size: xx-large;
+        }
+
+        .floor-2 {
+            background-image: url('https://inline.imgix.net/branch/-LdaoOlyYejB44opehGN:inline-live-2a466-null-138ebbdc-8123-4f18-9df8-f4fe6350367d.jpg');
+            background-size: cover;
+            background-position: center;
+            font-size: xx-large;
+        }
+
+        .floor-1 {
+            background-image: url('https://cdn2.ettoday.net/images/5608/5608591.jpg');
+            background-size: cover;
+            background-position: center;
+            font-size: xx-large;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>美食廣場</h3>
+    </header>
+    <table>
+        <tr>
+            <td class="floor-3">
+                <a href="./f3.html">3F</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="floor-2">
+                <a href="./f2.html">2F</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="floor-1">
+                <a href="./f1.html">1F</a>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
