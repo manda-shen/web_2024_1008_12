@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* 乙級丙級或者特定大小，可以加上overflow: hidden;網頁失去往下滑的能力 */
+        }
+
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-image: url(./images.jpg);
+            background-color: lightblue;
+            background-size: auto 300px;
+            background-position: -5px;
+        }
+
+        .box2 {
+            width: 98px;
+            height: 148px;
+            background-image: url(./images.jpg);
+            background-color: lightblue;
+            background-size: auto 300px;
+            background-position: -3px -2px;
+        }
+
+        .box3 {
+            width: 98px;
+            height: 148px;
+            background-image: url(./images.jpg);
+            background-color: lightblue;
+            background-size: auto 300px;
+            background-position: -3px 150px;
+        }
+
+        .box4 {
+            width: 98px;
+            height: 148px;
+            background-image: url(./images.jpg);
+            background-color: lightblue;
+            background-size: auto 300px;
+            background-position: 100px -2px;
+        }
+
+        .box5 {
+            width: 98px;
+            height: 148px;
+            background-image: url(./images.jpg);
+            background-color: lightblue;
+            background-size: auto 300px;
+            background-position: 100px 150px;
+        }
+
+        .box6 {
+            width: 98px;
+            height: 148px;
+            background-image: url(./images.jpg);
+            background-color: lightblue;
+            background-size: auto 300px;
+            background-position: -208px -2px;
+        }
+
+        .box7 {
+            width: 98px;
+            height: 148px;
+            background-image: url(./images.jpg);
+            background-color: lightblue;
+            background-size: auto 300px;
+            background-position: -208px 150px;
+        }
+
+        .box-img {
+            width: 101px;
+            height: 148px;
+            background-color: lightblue;
+            overflow: hidden;
+        }
+
+        .box8 {
+            width: 98px;
+            height: 148px;
+            background-image: url(./images.jpg);
+            background-color: lightblue;
+            background-size: auto 300px;
+            background-position: -106px 150px;
+        }
+
+        table {
+            position: relative;
+            background-color: antiquewhite;
+            background-image: url(https://t3.ftcdn.net/jpg/06/24/02/64/360_F_624026416_AMalbqTnzQcp2LUP60xZx3n6G8Kru4oe.jpg);
+            background-size: auto 300px;
+            background-position: -80px 0px;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        table::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(0px);
+            z-index: -1;
+        }
+
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <hr>
+    <div class="box2"></div>
+    <hr>
+    <div class="box3"></div>
+    <hr>
+    <div class="box4"></div>
+    <hr>
+    <div class="box5"></div>
+    <hr>
+    <div class="box6"></div>
+    <hr>
+    <div class="box7"></div>
+    <hr>
+    <!-- box img -->
+    <h3>box img</h3>
+    <div class="box-img">
+        <img src="./images.jpg" style="height: 300px;" alt="">
+    </div>
+
+    <hr>
+    <table>
+        <tr>
+            <td>
+                <div class="box6"></div>
+            </td>
+            <td>
+                <div class="box2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="box7"></div>
+            </td>
+            <td>
+                <div class="box8"></div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
