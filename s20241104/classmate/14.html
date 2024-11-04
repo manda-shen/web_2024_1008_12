@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>機器人</title>
+    <style>
+        /* 設定頁面樣式 */
+        body {
+            display: flex;
+            /* 使用彈性布局 */
+            justify-content: center;
+            /* 水平置中 */
+            align-items: center;
+            /* 垂直置中 */
+            height: 100vh;
+            /* 佔滿整個視窗高度 */
+            background-color: #f0f0f0;
+            /* 背景顏色 */
+            margin: 0;
+            /* 去除預設的邊距 */
+        }
+
+        /* 機器人外觀 */
+        #robot {
+            position: relative;
+            /* 相對定位，便於內部元素定位 */
+        }
+
+        /* 機器人身體 */
+        #body {
+            width: 100px;
+            height: 80px;
+            background-color: #4CAF50;
+            border: 2px solid #ffffff;
+            /* 邊框 */
+            border-radius: 10px;
+            /* 圓角 */
+        }
+
+        /* 機器人頭部 */
+        #head {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            border-top-left-radius: 10px;
+            /* 左上圓角 */
+            border-top-right-radius: 10px;
+            /* 右上圓角 */
+            position: absolute;
+            /* 絕對定位 */
+            top: -50px;
+            /* 靠上方 */
+        }
+
+        /* 眼睛 */
+        #eyes {
+            position: absolute;
+            /* 絕對定位 */
+            top: 10px;
+            /* 距離頭部上方10px */
+            left: 15px;
+            /* 距離左邊15px */
+            width: 70px;
+            /* 寬度 */
+            display: flex;
+            /* 使用彈性布局 */
+            justify-content: space-between;
+            /* 眼睛之間均勻分配空間 */
+        }
+
+        /* 眼睛的樣式 */
+        .eye {
+            width: 15px;
+            /* 眼睛寬度 */
+            height: 15px;
+            /* 眼睛高度 */
+            background-color: white;
+            /* 眼睛顏色 */
+            border-radius: 50%;
+            /* 圓形 */
+            border: 2px solid black;
+            /* 黑色邊框 */
+        }
+
+        /* 嘴巴 */
+        #mouth {
+            position: absolute;
+            /* 絕對定位 */
+            bottom: 10px;
+            /* 距離下方10px */
+            left: 15px;
+            /* 距離左邊15px */
+            width: 70px;
+            height: 10px;
+            background-color: white;
+            border-radius: 5px;
+            /* 圓角 */
+        }
+
+        /* 手臂 */
+        .arm {
+            width: 20px;
+            height: 60px;
+            background-color: orange;
+            /* 顏色 */
+            position: absolute;
+            /* 絕對定位 */
+        }
+
+        /* 左手臂 */
+        .left-arm {
+            left: -20px;
+            /* 靠左 */
+            top: 10px;
+            /* 距離身體上方30px */
+        }
+
+        /* 右手臂 */
+        .right-arm {
+            right: -20px;
+            /* 靠右 */
+            top: -30px;
+            /* 距離身體上方30px */
+        }
+
+        /* 腿部 */
+        #left-leg {
+            position: absolute;
+            bottom: 0;
+            /* 靠下方 */
+            left: 10px;
+            /* 距離左邊10px */
+            width: 40px;
+            height: 20px;
+            background-color: blue;
+            border-radius: 5px;
+            /* 圓角 */
+        }
+
+        #right-leg {
+            position: absolute;
+            bottom: 0;
+            /* 靠下方 */
+            right: 10px;
+            /* 距離右邊10px */
+            width: 40px;
+            height: 20px;
+            background-color: yellow;
+            border-radius: 5px;
+            /* 圓角 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 機器人主體 -->
+    <div id="robot">
+        <div id="head">
+            <!-- 眼睛 -->
+            <div id="eyes">
+                <div class="eye"></div> <!-- 左眼 -->
+                <div class="eye"></div> <!-- 右眼 -->
+            </div>
+            <div id="mouth"></div> <!-- 嘴巴 -->
+        </div>
+        <div id="body"></div> <!-- 機器人身體 -->
+        <div class="arm left-arm"></div> <!-- 左手臂 -->
+        <div class="arm right-arm"></div> <!-- 右手臂 -->
+        <div id="left-leg"></div> <!-- 左腿 -->
+        <div id="right-leg"></div> <!-- 右腿 -->
+    </div>
+
+</body>
+
+</html>
