@@ -7,8 +7,7 @@
     <title>Document</title>
     <style>
         .box {
-            width: 70%;
-            max-width: 1026px;
+            width: 190px;
             background-color: rgb(148, 216, 216);
             display: flex;
             margin: auto;
@@ -19,32 +18,20 @@
         }
 
 
-        /* 當視窗寬度小於 533px 時，設置固定寬度 */
-        @media (max-width: 533px) {
-            .box {
-                width: 190px;
-            }
+        /* 預設寬度(最小)為190px，以下設置其他寬度 */
+        /* 當視窗寬度大於576px，設置固定寬度380px */
+        @media (min-width: 576px) {
+            .box {width: 380px;}
         }
 
-        /* 當視窗寬度在 533px 到 774px 之間時，設置固定寬度 */
-        @media (min-width: 533px) and (max-width: 774px) {
-            .box {
-                width: 380px;
-            }
+        /* 當視窗寬度大於768px，設置固定寬度570px */
+        @media (min-width: 768px) {
+            .box {width: 570px;}
         }
 
-        /* 當視窗寬度在 774px 到 1016px 之間時，設置固定寬度 */
-        @media (min-width: 770px) and (max-width: 1016px) {
-            .box {
-                width: 570px;
-            }
-        }
-
-        /* 當視窗寬度大於或等於 1016px 時，設置固定寬度 */
-        @media (min-width: 1016px) {
-            .box {
-                width: 760px;
-            }
+        /* 當視窗寬度大於992px，設置固定寬度760px*/
+        @media (min-width: 992px) {
+            .box {width: 760px;}
         }
 
         .item {
