@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 80%;
+            margin: auto;
+            background-color: lightblue;
+            display: flex;
+            padding: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .line {
+            width: 95%;
+            height: 170px;
+            background-color: #E8FCFF;
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+        }
+
+        .row {
+            width: 150px;
+            height: 150px;
+            background-color: #FFE8E9;
+
+            /* 為了絕對定位圖片 */
+            margin: 5px;
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* 確保圖片覆蓋整個容器，並保持寬高比 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="line">
+            <div class="row">
+                餐點
+            </div>
+            <div class="row">
+                價格
+            </div>
+            <div class="row">
+                數量
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="line">
+            <div class="row pic">
+                <img src="./img/bf_75.jpg" alt="圖片">
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+                <input type="number" name="1" id="">
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="line">
+            <div class="row pic">
+                <img src="./img/bf_90.jpg" alt="圖片">
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="line">
+            <div class="row pic">
+                <img src="./img/bf_95.jpg" alt="圖片">
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
