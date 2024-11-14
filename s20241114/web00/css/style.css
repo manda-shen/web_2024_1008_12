@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    width: 1024px;
+    height: 768px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+/* 上方區塊 */
+.top {
+    width: 1000px;
+    height: 65px;
+    margin: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 994px;
+    height: 60px;
+    border-radius: 30px;
+    background-image: url(../17300-104301/logo.png);
+    background-position: center;
+    overflow: hidden;
+}
+
+
+/* 中間區塊 */
+.main1 {
+    width: 1000px;
+    margin: auto;
+    height: calc(768px - 65px - 20px);
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 中間的左邊區 */
+.left {
+    width: 215px;
+    height: calc(768px - 65px - 20px);
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    width: 215px;
+    height: calc(768px - 65px - 20px - 25px);
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.menu p {
+    color: #FF00FF;
+    font-family: '標楷體';
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.button {
+    width: 185px;
+    height: 35px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 16px;
+    font-family: '標楷體';
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../17300-104301/menu1.png);
+}
+
+.button:hover {
+    background-image: url(../17300-104301/menu2.png);
+}
+
+.update {
+    width: 215px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update p {
+    font-size: 16px;
+    font-family: '標楷體';
+    margin: 0;
+    color: #000000;
+}
+
+/* 中間的右邊區 */
+.right {
+    width: 770px;
+    height: calc(768px - 65px - 20px);
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.marquee {
+    width: 770px;
+    height: 29px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.content {
+    width: 770px;
+    height: calc(768px - 65px - 20px - 29px);
+    background-color: white;
+    border: 1px solid #ccc;
+    background-image: url(../17300-104301/0101.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_pic {
+    width: 250px;
+    height: 250px;
+    background-image: url(../17300-104301/0104.jpg);
+}
+
+.footer {
+    width: 1000px;
+    height: 20px;
+    margin: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+}

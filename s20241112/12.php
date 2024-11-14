@@ -145,10 +145,15 @@
 
 <body>
     <div class="header">
-        <div class="logo">
-
-        </div>
+        <div class="logo"></div>
     </div>
+
+    <?php
+    // 初始化變量，如果未設置，設置為 0
+    $mount1 = isset($_GET['mount1']) ? (int)$_GET['mount1'] : 1;
+    $mount2 = isset($_GET['mount2']) ? (int)$_GET['mount2'] : 1;
+    $mount3 = isset($_GET['mount3']) ? (int)$_GET['mount3'] : 1;
+    ?>
 
     <div class="box">
         <div class="line">
@@ -157,40 +162,60 @@
             <div class="row">數量</div>
             <div class="row">金額</div>
         </div>
+
+        <!-- 訂單第一項 -->
         <div class="line">
             <div class="row pic">
                 <img src="./img/bf_75.jpg" alt="圖片">
             </div>
             <div class="row">75元</div>
             <div class="row2">
-                <input type="number" value="1">
+            <form action="12.php" method="get">
+                <input type="number" name="mount1" value="<?= $mount1; ?>" min="1" onchange="this.form.submit()">
+            </form>
             </div>
-            <div class="row2">75元</div>
+            <div class="row2"><?=75*$mount1;?></div>
         </div>
+
+        <!-- 訂單第二項 -->
         <div class="line">
             <div class="row pic">
                 <img src="./img/bf_90.jpg" alt="圖片">
             </div>
             <div class="row">90元</div>
             <div class="row2">
-                <input type="number" value="2">
+            <form action="" method="get">
+                    <input type="number" name="mount2" value="<?= $mount1; ?>" min="1" onchange="this.form.submit()">
+                    <input type="hidden" name="mount1" value="<?= $mount2; ?>">
+                    <input type="hidden" name="mount3" value="<?= $mount3; ?>">
+                </form>
+                </form>
             </div>
-            <div class="row2">180元</div>
+            <div class="row2"><?=90*$mount2;?></div>
         </div>
+
+        <!-- 訂單第三項 -->
         <div class="line">
             <div class="row pic">
                 <img src="./img/bf_95.jpg" alt="圖片">
             </div>
             <div class="row">95元</div>
             <div class="row2">
-                <input type="number" value="3">
+            <form action="" method="get">
+                    <input type="number" name="mount3" value="<?= $mount3; ?>" min="1" onchange="this.form.submit()">
+                    <input type="hidden" name="mount1" value="<?= $mount1; ?>">
+                    <input type="hidden" name="mount2" value="<?= $mount2; ?>">
+                </form>
             </div>
-            <div class="row2">285元</div>
+            <div class="row2"><?=95*$mount3;?></div>
         </div>
+
+        <!-- 總金額 -->
         <div class="line">
-            <div class="row">總金額 540 元</div>
+        <div class="row">總金額 <?= 75 * $mount1 + 90 * $mount2 + 95 * $mount3; ?> 元</div>
         </div>
     </div>
 </body>
+
 
 </html>
