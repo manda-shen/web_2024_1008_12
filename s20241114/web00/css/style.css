@@ -132,8 +132,18 @@
     border: 1px solid #ccc;
     background-image: url(../17300-104301/0101.jpg);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.content div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content p{
+    margin: 0px;
 }
 
 .main_pic {
