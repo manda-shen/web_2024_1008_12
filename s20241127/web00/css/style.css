@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+
+}
+
+.main {
+    width: 1024px;
+    height: 768px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+/* 上方區塊 */
+.top {
+    width: 1000px;
+    height: 65px;
+    margin: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 994px;
+    height: 60px;
+    border-radius: 30px;
+    background-image: url(../17300-104301/logo.png);
+    background-position: center;
+    overflow: hidden;
+}
+
+
+/* 中間區塊 */
+.main1 {
+    width: 1000px;
+    margin: auto;
+    height: calc(768px - 65px - 20px);
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 中間的左邊區 */
+.aside {
+    width: 215px;
+    height: calc(768px - 65px - 20px);
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    width: 215px;
+    height: calc(768px - 65px - 20px - 25px);
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.menu p {
+    color: #FF00FF;
+    font-family: '標楷體';
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: underline 1px black;
+    text-underline-offset: 8px;
+}
+
+.button {
+    width: 185px;
+    height: 35px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 16px;
+    font-family: '標楷體';
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../17300-104301/menu1.png);
+}
+
+.button:hover {
+    background-image: url(../17300-104301/menu2.png);
+}
+
+.update {
+    width: 215px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update p {
+    font-size: 16px;
+    font-family: '標楷體';
+    margin: 0;
+    color: #000000;
+}
+
+/* 中間的右邊區 */
+.right {
+    width: 770px;
+    height: calc(768px - 65px - 20px);
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.marquee {
+    width: 770px;
+    height: 29px;
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #0000FF;
+    font-family: '標楷體';
+    font-size: 24px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 770px;
+    height: calc(768px - 65px - 20px - 29px);
+    background-color: white;
+    border: 1px solid #ccc;
+    background-image: url(../17300-104301/0101.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_mainPage {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_pic {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.main_pic img {
+    width: 250px;
+    height: auto;
+}
+
+.content_p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-family: '標楷體';
+    font-weight: bold;
+    font-style: italic;
+    color: #0000FF;
+}
+
+.content_p p {
+    margin: 5px;
+}
+
+.footer {
+    width: 1000px;
+    height: 20px;
+    margin: auto;
+    align-self: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: '標楷體';
+    margin: 0;
+    color: #000000;
+    text-align: center;
+}
+
+.bg_page {
+    width: 100%;
+    background-image: url(../17300-104301/0101.jpg);
+}
+
+.title {
+    font-family: '標楷體';
+    font-size: 18px;
+    color: #FF0000;
+    margin: auto;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.nav td {
+    text-align: center;
+}
+
+.nav2 table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.nav2 {
+    margin-top: 20px;
+}
+
+.nav2 td {
+    text-align: center;
+}
+
+.history_text {
+    font-family: '標楷體';
+    font-size: 16px;
+    color: #FF0000;
+}
+
+.history_text div {
+    margin: 16px;
+}
+
+.history_text div p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.even {
+    font-size: 16px;
+    font-family: '標楷體';
+    color: #800000;
+    margin-top: 50px;
+}
+
+.even p {
+    padding: 0px;
+    margin: 0px;
+}
+
+#even1 {
+    font-size: 16px;
+    font-family: '標楷體';
+    color: #0000FF;
+    margin-top: 10px;
+}
+
+#even2 {
+    font-size: 16px;
+    font-family: '標楷體';
+    color: #FF0000;
+    margin-top: 10px;
+}
+
+#even3 {
+    font-size: 16px;
+    font-family: '標楷體';
+    color: #00FF00;
+    margin-top: 10px;
+}
+
+#even4 {
+    font-size: 16px;
+    font-family: '標楷體';
+    color: #000000;
+    margin-top: 10px;
+}
+
+.title-learning {
+    font-family: '標楷體';
+    font-size: 18px;
+    color: #00FFFF;
+    margin: auto;
+
+}
+
+.title-learning p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.learning_items {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: blue;
+}
+
+.learning_items div {
+    margin: 12px;
+    padding: 3px;
+}
+
+.learning_items div:hover {
+    background-color: rgb(248, 208, 155);
+}

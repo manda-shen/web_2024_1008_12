@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+        }
+
+        .bg-blue {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+        }
+
+        .bg-pink {
+            width: 300px;
+            height: 300px;
+            background-color: lightpink;
+        }
+
+        .bg-green {
+            width: 300px;
+            height: 300px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="bg-blue" onclick="boxFun()">
+
+    </div>
+
+    <script>
+
+        // let box = document.getElementByID('box');
+        let box = document.getElementById('box');
+
+        // 1. div onclick => js function
+        function boxFun() {
+            console.log('hello box');
+            box.setAttribute('class', 'bg-pink');
+        }
+
+
+        // box.style.backgroundColor = "lightpink";
+        // box.classList.add("bg-blue");
+        // box.classList.add("bg-pink");
+
+        //attr
+        box.setAttribute("class", "bg-green");
+        // box.setAttribute("class", "bg-green");
+
+        console.log('box', box);
+
+        // event
+
+
+
+    </script>
+</body>
+
+</html>
