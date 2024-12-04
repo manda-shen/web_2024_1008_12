@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .box {
+        border: 2px;
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+        text-align: center;
+        padding-top: 30px;
+        margin-top: 30px;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p><input type="number" name="" id="num1"></p>
+            <p><input type="number" name="" id="num2"></p>
+            <p>
+                <button type="button" id="myBtn">myBtn</button>
+            </p>
+            <p>
+                <span id="box1Span"></span>
+            </p>
+        </div>
+        <div class="box">
+            sum = ?
+            <p>
+                <span id="box2Span"></span>
+            </p>
+        </div>
+        <div class="box">
+            sum x 10 = ?
+            <p>
+                <span id="box3Span"></span>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            // 1. bind
+            const num1 = $('#num1');
+            const num2 = $('#num2');
+            const myBtn = $('#myBtn');
+            const box1Span = $('#box1Span');
+            const box2Span = $('#box2Span');
+            const box3Span = $('#box3Span');
+
+            // 2.action
+            myBtn.click(function (e) {
+                console.log('myBtn ok');
+
+                // 1.get num1
+                // 2.get num2
+                // 3.sum = num1 + num2
+
+                // 1.get num1
+                let num1Value = Number(num1.val());
+                console.log('num1Value', num1Value);
+                console.log('num1Value typeof', typeof (num1Value));
+
+                // 2.get num2
+                let num2Value = Number(num2.val());
+                console.log('num2Value', num2Value);
+                console.log('num2Value typeof', typeof (num2Value));
+
+                // 3.sum = num1 + num2
+                let sum = num1Value + num2Value;
+                console.log('sum', sum);
+
+                // 4.show result box1Span
+                box1Span.text(`${num1Value} + ${num2Value} = ${sum}`);
+
+                // 5.show result box2Span
+                box2Span.text(`${num1Value} + ${num2Value} = ${sum}`);
+
+                // 6.show result box3Span
+                let x10Result = sum * 10;
+                box3Span.text(`${sum} x 10 = ${x10Result}`);
+
+
+
+
+            });
+
+
+        });
+
+
+        // function sum(num1, num2) {
+        //     let result = num1 + num2;
+        //     console.log(`sum = ${num1} + ${num2} = ${result}`);
+        //     return result;
+        // }
+
+        // document.getElementById('myBtn').addEventListener('click', function () {
+        //     // 取得使用者輸入的數值
+        //     const num1 = parseFloat(document.getElementById('num1').value);
+        //     const num2 = parseFloat(document.getElementById('num2').value);
+
+        //     // 確保輸入為數字
+        //     if (isNaN(num1) || isNaN(num2)) {
+        //         alert("請輸入有效的數字！");
+        //         return;
+        //     }
+
+
+        //     // 計算總和
+        //     const total = sum(num1, num2);
+
+        //     document.getElementById('sumBox').textContent = `sum = ${total}`;
+        //     document.getElementById('sumX10Box').textContent = `sum x 10 = ${total * 10}`;
+        // });
+
+
+    </script>
+</body>
+
+</html>
