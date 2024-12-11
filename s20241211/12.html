@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .logo {
+            width: 100%;
+            background-color: rgb(231, 223, 223);
+            border-bottom: 1px solid rgb(182, 177, 177);
+            text-align: center;
+            padding: 20px;
+            padding-top: 40px;
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 20%;
+        }
+
+        .box {
+            width: 900px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            justify-self: center;
+            margin-top: 30px;
+            padding: 15px;
+        }
+
+        .box1 {
+            width: 250px;
+            background-color: rgb(231, 223, 223);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px;
+            margin: 15px;
+            padding: 4%;
+        }
+
+        .img_box {
+            width: 100%;
+            height: 100%;
+
+            border-radius: 15px 15px 0px 0px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img_box img {
+            width: 130%;
+            filter: drop-shadow(1px 5px 5px rgba(124, 99, 99, 0.5));
+        }
+
+        h3 {
+            margin: 5px;
+            padding: 5px;
+            font-size: 16px;
+            font-family: '微軟正黑體';
+            font-weight: bolder;
+        }
+
+        p {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+
+        button {
+            margin-top: 15px;
+            padding: 5px 8px;
+            color: rgb(110, 70, 46);
+            background-color: rgb(243, 236, 232);
+            border: 0px solid rgb(110, 107, 107);
+            box-shadow: 1px 1px 5px rgba(40, 46, 53, 0.3);
+            border-radius: 8px;
+        }
+
+        del {
+            color: rgb(179, 107, 107);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .bg-darkred {
+            background-color: rgb(158, 15, 15);
+            color: white;
+        }
+
+        .text-large {
+            font-size: 20px;
+            font-weight: bold;
+            transition: font-size 0.3s ease;
+            /* 平滑過渡效果 */
+        }
+
+        .text-red {
+            color: rgb(246, 253, 146) !important;
+            font-size: 20px;
+        }
+
+        #sumResult {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(179, 107, 107);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="logo"><img src="./img/l.svg" alt=""></div>
+
+    <div class="box" id="box">
+        <div class="box1">
+            <!-- 圖片 -->
+            <div class="img_box">
+                <img src="./img/1696997798269.png" alt="">
+            </div>
+            <!-- 品名 -->
+            <h3>30盎司帶骨牛小排堡</h3>
+            <!-- 介紹 -->
+            <p>
+                起司、番茄、墨西哥辣椒、洋蔥、酸黃瓜、生菜、蜂蜜芥末醬、牛肉多蜜醬
+            </p>
+            <!-- 單價 -->
+            <p class="priceClass" id="price1" data-price="720">
+                720元
+            </p>
+            <!-- 購買數量 -->
+            <input class="inputClass" type="number" name="" id="input1" value="0" max="10" min="0">
+            <!-- 小計 -->
+            <button class="totalClass" id="total1">
+                0
+            </button>
+        </div>
+
+        <div class="box1">
+            <!-- 圖片 -->
+            <div class="img_box">
+                <img src="./img/1696997848891.png" alt="">
+            </div>
+            <!-- 品名 -->
+            <h3>JK經典起司牛肉堡</h3>
+            <!-- 介紹 -->
+            <p>
+                起司、番茄、墨西哥辣椒、洋蔥、酸黃瓜、生菜、蜂蜜芥末醬、牛肉多蜜醬
+            </p>
+            <!-- 單價 -->
+            <p class="priceClass" id="price2" data-price="280">
+                280元
+            </p>
+            <!-- 購買數量 -->
+            <input class="inputClass" type="number" name="" id="input2" value="0" max="10" min="0">
+            <!-- 小計 -->
+            <button class="totalClass" id="total2">
+                0
+            </button>
+        </div>
+
+        <div class="box1">
+            <!-- 圖片 -->
+            <div class="img_box">
+                <img src="./img/1696997958228.png" alt="">
+            </div>
+            <!-- 品名 -->
+            <h3>爐烤豬膠原腱肉堡</h3>
+            <!-- 介紹 -->
+            <p>
+                起司、番茄、墨西哥辣椒、洋蔥、酸黃瓜、生菜、蜂蜜芥末醬
+            </p>
+            <!-- 單價 -->
+            <p class="priceClass" id="price3" data-price="260">
+                260元
+            </p>
+            <!-- 購買數量 -->
+            <div>
+                <input class="inputClass" type="number" name="" id="input3" value="0" max="10" min="0">
+            </div>
+            <!-- 小計 -->
+            <button class="totalClass" id="total3">
+                0
+            </button>
+        </div>
+
+    </div>
+    <div>
+        <p id="sumResult">
+            總金額為 0 元
+        </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+
+            function getSum() {
+                let getTotal1Value = Number(total1.text());
+                let getTotal2Value = Number(total2.text());
+                let getTotal3Value = Number(total3.text());
+                console.log('getTotal1Value', getTotal1Value);
+                console.log('getTotal2Value', getTotal2Value);
+                console.log('getTotal3Value', getTotal3Value);
+
+                let sum = getTotal1Value + getTotal2Value + getTotal3Value;
+                console.log('getSum', sum);
+
+                // > 200
+                // 打8折
+                // other
+                // 原價
+                // if (sum >= 200) {
+                //     sum = sum * 0.8;
+                //     let resultString = `${sum} 元`;
+                //     sumResult.text(resultString);
+                // } else {
+                //     let resultString = `${sum} 元`;
+                //     sumResult.text(resultString);
+                // }
+
+                // 重構
+                let resultString = "";
+                if (sum >= 1000) {
+                    sum = sum * 0.8;
+                    sumResult.attr('class', 'text-red');
+                    resultString = `滿千打八折 總金額為 ${sum} 元`;
+                } else {
+                    sumResult.attr('class', '');
+                    // sumResult.removeClass('text-red');
+                    resultString = `總金額為 ${sum} 元`;
+                }
+
+                sumResult.text(resultString);
+
+
+
+            }
+
+
+
+
+            // 1.bind
+            const price1 = $('#price1');
+            const input1 = $('#input1');
+            const total1 = $('#total1');
+
+            const price2 = $('#price2');
+            const input2 = $('#input2');
+            const total2 = $('#total2');
+
+            const price3 = $('#price3');
+            const input3 = $('#input3');
+            const total3 = $('#total3');
+
+            const sumResult = $('#sumResult');
+            let sum = 0;
+
+
+            // 2.action
+            input1.change(function (e) {
+                console.log('chaneg ok');
+                let getPrice1Value = Number(price1.attr('data-price'));
+                let getInput1Value = Number(input1.val());
+                let result1 = getPrice1Value * getInput1Value;
+                console.log(getPrice1Value);
+                console.log(getInput1Value);
+                console.log(result1);
+                total1.text(result1);
+
+                getSum();
+
+            });
+
+            input2.change(function (e) {
+                console.log('chaneg ok');
+                let getPrice2Value = Number(price2.attr('data-price'));
+                let getInput2Value = Number(input2.val());
+                let result2 = getPrice2Value * getInput2Value;
+                console.log(getPrice2Value);
+                console.log(getInput2Value);
+                console.log(result2);
+                total2.text(result2);
+
+                getSum();
+
+            });
+
+            input3.change(function (e) {
+                console.log('chaneg ok');
+                let getPrice3Value = Number(price3.attr('data-price'));
+                let getInput3Value = Number(input3.val());
+                let result3 = getPrice3Value * getInput3Value;
+                console.log(getPrice3Value);
+                console.log(getInput3Value);
+                console.log(result3);
+                total3.text(result3);
+
+                getSum();
+            });
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>
