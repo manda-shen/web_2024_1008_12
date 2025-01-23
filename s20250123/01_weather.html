@@ -12,6 +12,20 @@
 </head>
 
 <body>
+    <div class="container mt-3">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>weather</th>
+                </tr>
+            </thead>
+            <tbody id="myTbody">
+
+            </tbody>
+        </table>
+    </div>
 
     <!-- js include 順序 1.bs 2.jq 3.self -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
@@ -35,8 +49,40 @@
                 dataType: "Json",
                 success: function (res) {
                     console.log('res', res);
-                    let data = res.records.location[12];
+                    let data = res.records.location[12].locationName;
+                    data = res.records.location;
                     console.log('data', data);
+
+
+
+                    $.each(data, function (key, value) {
+                        // console.log('key', key);
+                        // console.log('value', value.locationName);
+
+                        let tmpLocationName = value.locationName;
+                        let tmpLocationID = key;
+                        // 天氣描述
+                        let weather = value.weatherElement[0].time[0].parameter.parameterName;
+                        // 天氣圖示代碼
+                        let weatherIconCode = 0 + value.weatherElement[0].time[0].parameter.parameterValue;
+                        // 建立圖示 URL
+                        let weatherIconUrl = `https://www.cwa.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/${weatherIconCode}.svg`;
+                        console.log('weather', weather);
+
+                        console.log('tmpLocationName', tmpLocationName);
+
+                        let row = `
+                                        <tr>
+                                            <td>${tmpLocationID + 1}</td>
+                                            <td>${tmpLocationName}</td>
+                                            <td>${weather}<img src="${weatherIconUrl}" alt="${weather}" style="width: 32px; height: 32px;">
+                                            </td>
+                                        </tr>
+                        `;
+                        $(myTbody).append(row);
+
+
+                    });
                 }
             })
 
