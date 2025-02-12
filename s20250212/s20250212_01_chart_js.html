@@ -47,6 +47,34 @@
         </table>
     </div>
 
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <canvas id="myChart1"></canvas>
+                </div>
+            </div>
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam amet nemo exercitationem
+                dignissimos numquam ab eveniet aliquid corrupti rem!
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <div>
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+            <div class="col mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam amet nemo exercitationem
+                dignissimos numquam ab eveniet aliquid corrupti rem!
+            </div>
+        </div>
+    </div>
+
 
     <img src="./data/stock/s0050.json" alt="" srcset="">
 
@@ -60,12 +88,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
         $(document).ready(function () {
             // 1.bind
             const myTable = $('#myTable');
             const myTbody = myTable.find('tbody');
-
+            const ctx1 = document.getElementById('myChart1');
+            const ctx2 = document.getElementById('myChart2');
 
             // data
 
@@ -80,8 +112,39 @@
                     console.log('res', res);
 
                     // foreach
+                    let sum = 0;
+                    let resArr = {
+                        'rise0': 0,
+                        'rise1': 0,
+                        'rise2': 0,
+                        'lose0': 0,
+                        'lose1': 0,
+                        'lose2': 0,
+                    };
+                    console.log('resArr', resArr);
+
+
+
+
                     $.each(data, function (key, value) {
-                        console.log('time', value.time);
+                        // console.log('time', value.time);
+                        let result = Number(value['%']);
+                        if (result >= 0.02) {
+                            // console.log('result', result);
+                            resArr['rise2'] += 1;
+                        } else if (result >= 0.01) {
+                            resArr['rise1'] += 1;
+                        } else if (result >= 0) {
+                            resArr['rise0'] += 1;
+                        } else if (result <= -0.02) {
+                            resArr['lose2'] += 1;
+                        } else if (result <= -0.01) {
+                            resArr['lose1'] += 1;
+                        } else if (result <= 0) {
+                            resArr['lose0'] += 1;
+                        }
+
+
                         let tmpText = `
                             <tr>
                                 <td>${value.time}</td>
@@ -95,6 +158,60 @@
                         `;
                         myTbody.append(tmpText);
                     });
+
+                    // console.log('sum', sum);
+                    console.log('resArr', resArr);
+
+
+                    // chart.js
+                    // ctx1
+                    new Chart(ctx1, {
+                        type: 'bar',
+                        data: {
+                            labels: ['rise0', 'rise1', 'rise2', 'lose0', 'lose1', 'lose2'],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [resArr['rise0'], resArr['rise1'], resArr['rise2'], resArr['lose0'], resArr['lose1'], resArr['lose2']],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                    // ctx1 end
+                    // ctx2
+                    const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                    const yValues = [55, 49, 44, 24, 15];
+                    const barColors = [
+                        "#b91d47",
+                        "#00aba9",
+                        "#2b5797",
+                        "#e8c3b9",
+                        "#1e7145"
+                    ];
+                    new Chart(ctx2, {
+                        type: "pie",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                backgroundColor: barColors,
+                                data: yValues
+                            }]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: "World Wide Wine Production"
+                            }
+                        }
+                    });
+                    // ctx2 end
+                    // chart.js end
 
                     myTable.DataTable({
                         language: {

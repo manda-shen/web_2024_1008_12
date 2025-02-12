@@ -56,8 +56,36 @@
                     <canvas id="myChart1"></canvas>
                 </div>
             </div>
-
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam amet nemo exercitationem
+                dignissimos numquam ab eveniet aliquid corrupti rem!
+            </div>
         </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <div>
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+            <div class="col mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam amet nemo exercitationem
+                dignissimos numquam ab eveniet aliquid corrupti rem!
+            </div>
+        </div>
+
+        <!-- 新增雷達圖 -->
+        <div class="row mt-5">
+            <div class="col">
+                <div>
+                    <canvas id="myChart3"></canvas>
+                </div>
+            </div>
+            <div class="col mt-5">
+                這裡是 Radar 圖表示範。
+            </div>
+        </div>
+
     </div>
 
 
@@ -82,6 +110,9 @@
             const myTable = $('#myTable');
             const myTbody = myTable.find('tbody');
             const ctx1 = document.getElementById('myChart1');
+            const ctx2 = document.getElementById('myChart2');
+            // 新增第三個雷達圖 canvas
+            const ctx3 = document.getElementById('myChart3');
 
             // data
 
@@ -167,7 +198,59 @@
                             }
                         }
                     });
+                    // ctx1 end
+                    // ctx2
+                    new Chart(ctx2, {
+                        type: 'pie',
+                        data: {
+                            labels: ['rise0', 'rise1', 'rise2', 'lose0', 'lose1', 'lose2'],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [resArr['rise0'], resArr['rise1'], resArr['rise2'], resArr['lose0'], resArr['lose1'], resArr['lose2']],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                    // ctx2 end
                     // chart.js end
+
+                    // Radar Chart (新增加的圖表)
+                    new Chart(ctx3, {
+                        type: 'radar',
+                        data: {
+                            labels: ['rise0', 'rise1', 'rise2', 'lose0', 'lose1', 'lose2'],
+                            datasets: [{
+                                label: 'Radar Data',
+                                data: [
+                                    resArr['rise0'],
+                                    resArr['rise1'],
+                                    resArr['rise2'],
+                                    resArr['lose0'],
+                                    resArr['lose1'],
+                                    resArr['lose2']
+                                ],
+                                fill: true,
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                                pointBorderColor: '#fff',
+                            }]
+                        },
+                        options: {
+                            elements: {
+                                line: {
+                                    borderWidth: 3
+                                }
+                            }
+                        }
+                    });
 
                     myTable.DataTable({
                         language: {

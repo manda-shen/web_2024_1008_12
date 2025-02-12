@@ -1,0 +1,52 @@
+[
+    {
+        "classtype": 1,
+        "flagno": 9565,
+        "storeno": "O000289",
+        "storename": "桃苗汽車股份有限公司-南新竹所",
+        "undertaker": "盧建成",
+        "storeaddr": "300新竹市經國路三段123號",
+        "contacttel": "03-5303388",
+        "taxno": null
+    },
+    {
+        "classtype": 1,
+        "flagno": 9564,
+        "storeno": "R000422",
+        "storename": "南都汽車股份有限公司永大營業所",
+        "undertaker": "郭俊麟",
+        "storeaddr": "710台南市永康區永大路三段302號",
+        "contacttel": "06-2014689",
+        "taxno": null
+    },
+    {
+        "classtype": 1,
+        "flagno": 9564,
+        "storeno": "O000289",
+        "storename": "桃苗汽車股份有限公司-南新竹所",
+        "undertaker": "盧建成",
+        "storeaddr": "300新竹市經國路三段123號",
+        "contacttel": "03-5303388",
+        "taxno": null
+    },
+    {
+        "classtype": 1,
+        "flagno": 9564,
+        "storeno": "D000331",
+        "storename": "南都汽車股份有限公司西台南營業所",
+        "undertaker": "杜武雄",
+        "storeaddr": "700台南市臺南市安平區永華路二段868號",
+        "contacttel": "06-2989191",
+        "taxno": null
+    },
+    {
+        "classtype": 1,
+        "flagno": 9563,
+        "storeno": "R000422",
+        "storename": "南都汽車股份有限公司永大營業所",
+        "undertaker": "郭俊麟",
+        "storeaddr": "710台南市永康區永大路三段302號",
+        "contacttel": "06-2014689",
+        "taxno": null
+    }
+]
