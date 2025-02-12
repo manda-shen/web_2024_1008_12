@@ -64,15 +64,9 @@
                         // 天氣描述
                         let weather = value.weatherElement[0].time[0].parameter.parameterName;
                         // 天氣圖示代碼
-                        let weatherIconCode = Number(value.weatherElement[0].time[0].parameter.parameterValue);
-
-                        if (weatherIconCode < 10) {
-                            weatherIconCode = "0" + weatherIconCode;
-                        } else {
-                            weatherIconCode = String(weatherIconCode); // 確保是字串格式
-                        }
+                        let weatherIconCode = value.weatherElement[0].time[0].parameter.parameterValue;
                         // 建立圖示 URL
-                        let weatherIconUrl = `https://www.cwa.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/${weatherIconCode}.svg`;
+                        let weatherIconUrl = `./day/${weatherIconCode}.svg`;
                         console.log('weather', weather);
 
                         console.log('tmpLocationName', tmpLocationName);
